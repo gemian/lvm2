@@ -2,6 +2,3 @@
 dmsetup
 dmstats
 lvm
-cmds.h
-command-count.h
-command-lines-input.h

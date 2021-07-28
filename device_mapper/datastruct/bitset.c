@@ -74,7 +74,7 @@ static int _test_word(uint32_t test, int bit)
 {
 	uint32_t tb = test >> bit;
 
-	return (tb ? ffs(tb) + bit - 1 : -1);
+	return (tb ? __builtin_ffs(tb) + bit - 1 : -1);
 }
 
 static int _test_word_rev(uint32_t test, int bit)

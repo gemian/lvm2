@@ -3445,7 +3445,7 @@ static int _check_devs_used_correspond_with_vg(struct volume_group *vg)
 	struct device_list *dl;
 	int found_inconsistent = 0;
 
-	strncpy(vgid, (const char *) vg->id.uuid, sizeof(vgid));
+	strncpy(vgid, (const char *) vg->id.uuid, ID_LEN);
 	vgid[ID_LEN] = '\0';
 
 	/* Mark all PVs in VG as used. */

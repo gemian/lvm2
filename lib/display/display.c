@@ -565,8 +565,13 @@ int lvdisplay_full(struct cmd_context *cmd,
 	if (lv_is_partial(lv))
 		partial = 1;
 
-	if (lv_is_raid(lv))
+	if (lv_is_raid(lv)) {
+#ifdef RAID_INTERNAL //Possibly this should be fixed by allowing raid_is_available to always be defined in segtype.h
 		raid_is_avail = raid_is_available(lv) ? 1 : 0;
+#else
+		raid_is_avail = 0;
+#endif
+	}
 
 	if (inkernel && info.suspended)
 		log_print("LV Status              suspended");

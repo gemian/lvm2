@@ -13,6 +13,9 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
+#include "configure.h"
+#include "lvm-version.h"
+
 #include "base/memory/zalloc.h"
 #include "device_mapper/misc/dmlib.h"
 #include "device_mapper/misc/dm-ioctl.h"

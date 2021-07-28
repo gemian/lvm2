@@ -13,6 +13,9 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
+#include "configure.h"
+#include "lvm-version.h"
+
 #include "misc/dmlib.h"
 #include "libdm-common.h"
 #include "ioctl/libdm-targets.h"

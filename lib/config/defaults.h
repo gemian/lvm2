@@ -16,6 +16,9 @@
 #ifndef _LVM_DEFAULTS_H
 #define _LVM_DEFAULTS_H
 
+#include "configure.h"
+#include "lvm-version.h"
+
 #include "device_mapper/vdo/vdo_limits.h"
 
 

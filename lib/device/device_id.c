@@ -12,6 +12,9 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
+#include "configure.h"
+#include "lvm-version.h"
+
 #include "base/memory/zalloc.h"
 #include "lib/misc/lib.h"
 #include "lib/commands/toolcontext.h"

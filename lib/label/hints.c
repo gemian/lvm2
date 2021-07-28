@@ -135,6 +135,9 @@
  *
  */
 
+#include "configure.h"
+#include "lvm-version.h"
+
 #include "lib/misc/lib.h"
 #include "base/memory/zalloc.h"
 #include "lib/label/label.h"

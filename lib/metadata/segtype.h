@@ -16,6 +16,9 @@
 #ifndef _SEGTYPES_H
 #define _SEGTYPES_H
 
+#include "configure.h"
+#include "lvm-version.h"
+
 #include "lib/metadata/metadata-exported.h"
 
 struct segtype_handler;

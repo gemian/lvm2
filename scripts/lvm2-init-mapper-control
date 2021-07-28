@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Create the /dev/mapper/control device for the ioctl
+# interface using the major and minor numbers that have been allocated
+# dynamically.
+
+echo -n "$PRE Finding device mapper major and minor numbers "
+# Gemian - Changed \+ to * as sed supplied within recovery was failing to match
+MAJOR=$(sed -n 's/^ *\([0-9]*\) *misc$/\1/p' /proc/devices)
+MINOR=$(sed -n 's/^ *\([0-9]*\) *device-mapper$/\1/p' /proc/misc)
+echo "Device mapper major: $MAJOR, minor: $MINOR"
+if test -n "$MAJOR" -a -n "$MINOR" ; then
+  mkdir -p -m 755 /dev/mapper
+  mknod -m 600 /dev/mapper/control c $MAJOR $MINOR
+fi
+
